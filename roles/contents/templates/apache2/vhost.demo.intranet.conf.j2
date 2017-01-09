@@ -1,0 +1,47 @@
+<VirtualHost *:{{ http_port }}>
+    ServerName  {{ server_name }}
+    ServerAlias {{ server_alias }}
+
+    DocumentRoot {{ web_base_path }}
+    DirectoryIndex {{ directory_index }}
+
+    <Directory {{ web_base_path }}>
+        Require all granted
+
+        <IfModule mod_rewrite.c>
+            Options -MultiViews
+            RewriteEngine On
+
+            RewriteCond %{REQUEST_FILENAME} !-f
+            RewriteRule ^(.*)$ {{ directory_index }} [QSA,L]
+
+        </IfModule>
+    </Directory>
+
+    <Directory />
+        Options All
+        AllowOverride All
+        Require all granted
+    </Directory>
+
+
+
+   # <IfModule mod_fastcgi.c>
+        AddHandler php7-fcgi .php
+        Action php7-fcgi /php7-fcgi virtual
+        Alias /php7-fcgi /usr/lib/cgi-bin/php7-fcgi
+        FastCgiExternalServer /usr/lib/cgi-bin/php7-fcgi -socket /var/run/php/php7.0-fpm.sock -pass-header Authorization
+   # </IfModule>
+
+
+
+    # ErrorLog ${APACHE_LOG_DIR}/error.log
+    ErrorLog {{ base_path }}error.log
+
+    # Possible values include: debug, info, notice, warn, error, crit, alert, emerg.
+    LogLevel warn
+
+    # CustomLog ${APACHE_LOG_DIR}/access.log combined
+    CustomLog {{ base_path }}access.log combined
+
+</VirtualHost>

@@ -1,0 +1,88 @@
+---
+- name: PHP | Add php-7.0 PPA
+  apt_repository: repo='ppa:ondrej/php'
+                  state=present
+                  update_cache=yes
+  sudo: true
+
+- name: PHP | install php packages
+  apt: pkg={{ item }} state=installed
+  with_items:
+    - php7.0-fpm
+    - php7.0-cli
+    - php7.0-common
+    - php7.0-curl
+    - php7.0-json
+    - php7.0-gd
+    - php7.0-mcrypt
+    - php7.0-odbc
+    - php7.0-pgsql
+    - php7.0-mbstring
+    - php7.0-mysql
+    - php7.0-xmlrpc
+    - php7.0-opcache
+    - php7.0-intl
+    - php7.0-bz2
+    - php7.0-xml
+    - libapache2-mod-fastcgi
+  sudo: true
+
+- name: PHP | FPM php.ini
+  template:
+    src=php.ini.j2
+    dest={{ php_fpm_ini_path }}
+    backup=yes
+    owner=root
+    group=root
+    mode=0644
+  sudo: true
+
+
+- name: Copy php7-fpm.conf
+  template: src=php7-fpm.conf.j2 dest=/etc/apache2/conf-available/php7-fpm.conf
+
+- name: link php7-fpm.conf conf-available to conf-enabled
+  file: src=/etc/apache2/conf-available/php7-fpm.conf dest=/etc/apache2/conf-enabled/php7-fpm.conf state=link
+
+
+
+- name: PHP | CLI php.ini
+  template:
+    src=php.ini.j2
+    dest={{ php_fpm_ini_path }}
+    backup=yes
+    owner=root
+    group=root
+    mode=0644
+  sudo: true
+
+- name: PHP | configure opcache
+  template:
+    src=opcache.ini.j2
+    dest={{ php_opcache_ini_path }}
+    backup=yes
+    owner=root
+    group=root
+    mode=0644
+  sudo: true
+
+- name: PHP | configure for nginx 1
+  lineinfile: dest={{ php_fpm_config_path }} regexp="^[#|;]?group = www" insertafter="^[#|;]?group = www" line="group = {{web_group}}"
+  sudo: true
+
+- name: PHP | configure for nginx 2
+  lineinfile: dest={{ php_fpm_config_path }} regexp="^[#|;]?listen\.group = www" insertafter="^[#|;]?listen\.group = www" line="listen.group = {{web_group}}"
+  sudo: true
+
+- name: PHP | configure for nginx 3
+  lineinfile: dest={{ php_fpm_config_path }} regexp="^[#|;]?listen\.mode = 0660" insertafter="^[#|;]?listen\.mode = 0660" line="listen.mode = 0660"
+  sudo: true
+
+- name: PHP | restart nginx
+  raw: service php7.0-fpm restart
+  sudo: true
+
+- name: PHP | restart fpm
+  raw: service php7.0-fpm restart
+  sudo: true
+

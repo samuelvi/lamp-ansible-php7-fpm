@@ -1,0 +1,31 @@
+[Wed Jan 04 07:14:11.087062 2017] [authz_core:error] [pid 30474] [client 192.168.50.1:50441] AH01630: client denied by server configuration: /usr/lib/cgi-bin/php7-fcgi
+[Wed Jan 04 07:14:11.870781 2017] [authz_core:error] [pid 30474] [client 192.168.50.1:50441] AH01630: client denied by server configuration: /usr/lib/cgi-bin/php7-fcgi
+[Wed Jan 04 07:40:00.863630 2017] [authz_core:error] [pid 13210] [client 192.168.50.1:51580] AH01630: client denied by server configuration: /usr/lib/cgi-bin/php7-fcgi
+[Wed Jan 04 07:40:10.392239 2017] [authz_core:error] [pid 14271] [client 192.168.50.1:51585] AH01630: client denied by server configuration: /usr/lib/cgi-bin/php7-fcgi
+[Wed Jan 04 07:40:10.999440 2017] [authz_core:error] [pid 14271] [client 192.168.50.1:51585] AH01630: client denied by server configuration: /usr/lib/cgi-bin/php7-fcgi
+[Wed Jan 04 07:40:11.192594 2017] [authz_core:error] [pid 14271] [client 192.168.50.1:51585] AH01630: client denied by server configuration: /usr/lib/cgi-bin/php7-fcgi
+[Wed Jan 04 07:40:11.369931 2017] [authz_core:error] [pid 14271] [client 192.168.50.1:51585] AH01630: client denied by server configuration: /usr/lib/cgi-bin/php7-fcgi
+[Wed Jan 04 07:40:11.521917 2017] [authz_core:error] [pid 14271] [client 192.168.50.1:51585] AH01630: client denied by server configuration: /usr/lib/cgi-bin/php7-fcgi
+[Wed Jan 04 07:40:37.314590 2017] [authz_core:error] [pid 14326] [client 192.168.50.1:51590] AH01630: client denied by server configuration: /usr/lib/cgi-bin/php7-fcgi
+[Wed Jan 04 07:40:38.070943 2017] [authz_core:error] [pid 14326] [client 192.168.50.1:51590] AH01630: client denied by server configuration: /usr/lib/cgi-bin/php7-fcgi
+[Wed Jan 04 07:46:36.265895 2017] [authz_core:error] [pid 14568] [client 192.168.50.1:51772] AH01630: client denied by server configuration: /usr/lib/cgi-bin/php7-fcgi
+[Wed Jan 04 07:46:37.089324 2017] [authz_core:error] [pid 14568] [client 192.168.50.1:51772] AH01630: client denied by server configuration: /usr/lib/cgi-bin/php7-fcgi
+[Wed Jan 04 07:46:37.326937 2017] [authz_core:error] [pid 14568] [client 192.168.50.1:51772] AH01630: client denied by server configuration: /usr/lib/cgi-bin/php7-fcgi
+[Wed Jan 04 07:46:37.513549 2017] [authz_core:error] [pid 14568] [client 192.168.50.1:51772] AH01630: client denied by server configuration: /usr/lib/cgi-bin/php7-fcgi
+[Wed Jan 04 07:46:37.688975 2017] [authz_core:error] [pid 14568] [client 192.168.50.1:51772] AH01630: client denied by server configuration: /usr/lib/cgi-bin/php7-fcgi
+[Wed Jan 04 07:46:39.392260 2017] [authz_core:error] [pid 14568] [client 192.168.50.1:51772] AH01630: client denied by server configuration: /usr/lib/cgi-bin/php7-fcgi
+[Wed Jan 04 07:46:39.887655 2017] [authz_core:error] [pid 14568] [client 192.168.50.1:51772] AH01630: client denied by server configuration: /usr/lib/cgi-bin/php7-fcgi
+[Wed Jan 04 07:46:40.095933 2017] [authz_core:error] [pid 14568] [client 192.168.50.1:51772] AH01630: client denied by server configuration: /usr/lib/cgi-bin/php7-fcgi
+[Wed Jan 04 07:46:40.273025 2017] [authz_core:error] [pid 14568] [client 192.168.50.1:51772] AH01630: client denied by server configuration: /usr/lib/cgi-bin/php7-fcgi
+[Wed Jan 04 07:46:40.442173 2017] [authz_core:error] [pid 14568] [client 192.168.50.1:51772] AH01630: client denied by server configuration: /usr/lib/cgi-bin/php7-fcgi
+[Wed Jan 04 07:46:40.605359 2017] [authz_core:error] [pid 14568] [client 192.168.50.1:51772] AH01630: client denied by server configuration: /usr/lib/cgi-bin/php7-fcgi
+[Wed Jan 04 07:46:40.773955 2017] [authz_core:error] [pid 14568] [client 192.168.50.1:51772] AH01630: client denied by server configuration: /usr/lib/cgi-bin/php7-fcgi
+[Wed Jan 04 07:48:26.234371 2017] [authz_core:error] [pid 14737] [client 192.168.50.1:51802] AH01630: client denied by server configuration: /usr/lib/cgi-bin/php7-fcgi
+[Wed Jan 04 07:48:26.975628 2017] [authz_core:error] [pid 14737] [client 192.168.50.1:51802] AH01630: client denied by server configuration: /usr/lib/cgi-bin/php7-fcgi
+[Wed Jan 04 07:48:27.192794 2017] [authz_core:error] [pid 14737] [client 192.168.50.1:51802] AH01630: client denied by server configuration: /usr/lib/cgi-bin/php7-fcgi
+[Wed Jan 04 07:48:27.370151 2017] [authz_core:error] [pid 14737] [client 192.168.50.1:51802] AH01630: client denied by server configuration: /usr/lib/cgi-bin/php7-fcgi
+[Wed Jan 04 07:48:27.544451 2017] [authz_core:error] [pid 14737] [client 192.168.50.1:51802] AH01630: client denied by server configuration: /usr/lib/cgi-bin/php7-fcgi
+[Wed Jan 04 07:48:27.716475 2017] [authz_core:error] [pid 14737] [client 192.168.50.1:51802] AH01630: client denied by server configuration: /usr/lib/cgi-bin/php7-fcgi
+[Wed Jan 04 07:48:27.877168 2017] [authz_core:error] [pid 14737] [client 192.168.50.1:51802] AH01630: client denied by server configuration: /usr/lib/cgi-bin/php7-fcgi
+[Wed Jan 04 07:52:09.599164 2017] [fastcgi:error] [pid 14854] (2)No such file or directory: [client 192.168.50.1:51862] FastCGI: failed to connect to server "/usr/lib/cgi-bin/php7-fcgi": connect() failed
+[Wed Jan 04 07:52:09.599587 2017] [fastcgi:error] [pid 14854] [client 192.168.50.1:51862] FastCGI: incomplete headers (0 bytes) received from server "/usr/lib/cgi-bin/php7-fcgi"
