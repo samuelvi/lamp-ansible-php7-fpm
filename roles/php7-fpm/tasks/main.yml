@@ -66,20 +66,16 @@
     mode=0644
   sudo: true
 
-- name: PHP | configure for nginx 1
+- name: PHP | configure for apache 1
   lineinfile: dest={{ php_fpm_config_path }} regexp="^[#|;]?group = www" insertafter="^[#|;]?group = www" line="group = {{web_group}}"
   sudo: true
 
-- name: PHP | configure for nginx 2
+- name: PHP | configure for apache 2
   lineinfile: dest={{ php_fpm_config_path }} regexp="^[#|;]?listen\.group = www" insertafter="^[#|;]?listen\.group = www" line="listen.group = {{web_group}}"
   sudo: true
 
-- name: PHP | configure for nginx 3
+- name: PHP | configure for apache 3
   lineinfile: dest={{ php_fpm_config_path }} regexp="^[#|;]?listen\.mode = 0660" insertafter="^[#|;]?listen\.mode = 0660" line="listen.mode = 0660"
-  sudo: true
-
-- name: PHP | restart nginx
-  raw: service php7.0-fpm restart
   sudo: true
 
 - name: PHP | restart fpm
